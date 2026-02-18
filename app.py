@@ -16,7 +16,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 # 2. Ler os dados existentes
 # ttl=0 garante que não usa cache antiga e vai buscar dados frescos
 try:
-    df = conn.read(worksheet="Folha1", ttl=0) # Confirma se a tua aba se chama "Folha1"
+    df = conn.read(worksheet="folha1", ttl=0) # Confirma se a tua aba se chama "Folha1"
     # Converter a coluna Data para datetime para evitar erros
     df['Data'] = pd.to_datetime(df['Data'])
 except Exception:
